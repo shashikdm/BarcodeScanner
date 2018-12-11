@@ -13,8 +13,10 @@ public class Result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         String result = Objects.requireNonNull(Objects.requireNonNull(getIntent().getExtras()).get("result")).toString();
+        String format = Objects.requireNonNull(Objects.requireNonNull(getIntent().getExtras()).get("format")).toString();
         TextView textView = findViewById(R.id.result);
-        textView.setText(result);
+        String output = "Value: "+result+"\nFormat: "+format;
+        textView.setText(output);
 
     }
 }

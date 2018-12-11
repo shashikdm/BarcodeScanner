@@ -74,8 +74,10 @@ public class OpenCamera2 extends AppCompatActivity implements ZXingScannerView.R
     public void handleResult(com.google.zxing.Result rawResult) {
 
         final String result = rawResult.getText();
+        final String details = rawResult.getBarcodeFormat().toString();
         Intent intent = new Intent(getApplicationContext(),Result.class);
         intent.putExtra("result", result);
+        intent.putExtra("format", details);
         startActivity(intent);
     }
 }
