@@ -18,7 +18,6 @@ public class OpenCamera2 extends AppCompatActivity implements ZXingScannerView.R
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_open_camera2);
         mScannerView = new ZXingScannerView(this);
         setContentView(mScannerView);
         int currentapiVersion = android.os.Build.VERSION.SDK_INT;
